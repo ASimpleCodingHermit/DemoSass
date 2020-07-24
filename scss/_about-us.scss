@@ -1,0 +1,83 @@
+.about-us {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  @media (max-width: 900px) {
+    height: 70vh;
+  }
+  &-left {
+    width: 40%;
+    background: linear-gradient(
+        to top right,
+        rgba(68, 93, 111, 0.5),
+        rgba(9, 32, 63, 0.3)
+      ),
+      url("../images/headerBG.jpg") center no-repeat;
+    border: 2px solid $darkblue;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    height: 90%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 1300px) {
+      left: -150px;
+    }
+    @media (max-width: 1000px) {
+      width: 50%;
+    }
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    @media (max-width: 1300px) {
+      padding: 0 50px;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+    .description {
+      margin: 20px 0;
+      padding: 0 10px;
+      font-family: $font-Josefin;
+      text-align: justify;
+      font-style: italic;
+      &::first-letter {
+        padding-left: 50px;
+      }
+      @media (max-width: 1600px) {
+        font-size: 18px;
+      }
+      @media (max-width: 1000px) {
+        font-size: 20px;
+      }
+      @media (max-width: 800px) {
+        text-align: justify;
+        font-size: 18px;
+        width: 100%;
+      }
+      @media (max-width: 500px) {
+        text-align: justify;
+        font-size: 12px;
+        width: 100%;
+      }
+    }
+    .main-header {
+      @include mainHeader;
+    }
+
+    .second-header {
+      @include secondaryHeader;
+    }
+  }
+}

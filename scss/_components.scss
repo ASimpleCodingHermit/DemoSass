@@ -1,0 +1,92 @@
+.logo {
+  font-size: 70px;
+  @include flex-layout;
+  padding: 5px 0 0 0;
+  color: $darkblue;
+  width: $smallWidth;
+  height: $smallHeight;
+  margin-right: 20px;
+  border: 1px solid $lightblue;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: $font-Josefin;
+  transition: all 0.5s;
+  &:hover {
+    border: 2px solid $darkblue;
+    border-radius: 50%;
+  }
+  @media (max-width: 1000px) {
+    font-size: 30px;
+    width: 90px;
+    height: 90px;
+  }
+  @media (max-width: 500px) {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.main {
+  font-size: 50px;
+  font-family: $font-Nunito;
+  color: $darkblue;
+  @include text-style;
+  @media (max-width: 1000px) {
+    font-size: 40px;
+  }
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
+}
+
+.secondary {
+  font-family: $font-Josefin;
+  font-size: 18px;
+  color: $darkblue;
+  text-align: center;
+  margin-top: 5px;
+  @include text-style;
+  text-align: center;
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
+}
+
+.header-button {
+  width: 170px;
+  height: 45px;
+  font-family: $font-Josefin;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $darkblue;
+  background-color: transparent;
+  border: 1px solid $darkblue;
+  box-shadow: 4px 4px 2px $darkblue;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  &:hover {
+    box-shadow: inset 4px 4px 2px $darkblue;
+  }
+  @media (max-width: 800px) {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+  }
+  @media (max-width: 500px) {
+    width: 130px;
+    height: 30px;
+    font-size: 12px;
+  }
+}

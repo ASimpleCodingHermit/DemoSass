@@ -1,0 +1,61 @@
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 1001;
+  @media (max-width: 800px) {
+    width: 35px;
+    height: 35px;
+  }
+  @media (max-width: 500px) {
+    width: 25px;
+    height: 25px;
+  }
+  .menu {
+    @extend %fullSpace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.5s;
+    &-line {
+      width: 100%;
+      height: 4px;
+      background-color: $darkblue;
+      transform-origin: right;
+      transition: all 0.5s 0.5s;
+    @media (max-width: 800px) {
+    height: 3px;
+  }
+    @media (max-width: 500px) {
+    height: 2px;
+  }
+    }
+  }
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0;
+}
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu {
+  transform: rotateZ(90deg);
+  
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+  transform: rotateZ(-40deg);
+  background-color: $offWhite;
+}
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+  opacity: 0;
+}
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+  transform: rotateZ(40deg);
+  background-color: $offWhite;
+}

@@ -1,0 +1,80 @@
+// Colors
+$dark: #67717A;
+$lightblue: rgba(68, 93, 111, 0.767);
+$midblue:rgba(89, 105, 115, 0.87);
+$darkblue: rgba(9, 32, 63, 0.781);
+$offWhite: #f2f2f2;
+
+// Widths
+$smallWidth: 100px;
+$smallHeight: 100px;
+
+//MIXINS
+@mixin flex-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-style($transform:uppercase) {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: $transform;
+}
+
+@mixin center($topValue) {
+  position: absolute;
+  top: $topValue;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+// Fonts
+$font-Josefin: 'Josefin Sans', sans-serif;
+$font-Nunito: "Nunito", sans-serif;
+
+// HEADERS
+@mixin mainHeader{
+  font-family:$font-Nunito;
+  font-size: 50px;
+  font-weight:300;
+  color: $darkblue;
+  margin-bottom: 20px;
+  @media (max-width: 1600px) {
+     font-size: 80px;
+  }
+  @media (max-width: 1000px) {
+     font-size: 60px;
+  }
+  @media (max-width: 500px) {
+     font-size: 40px;
+     margin-bottom: 20px;
+  }
+}
+
+@mixin secondaryHeader{
+  font-family:$font-Josefin;
+  font-size: 30px;
+  font-weight:300;
+  color: $darkblue;
+  margin-bottom: 40px;
+  @media (max-width: 1600px) {
+     font-size: 50px;
+     margin-bottom: 50px;
+  }
+  @media (max-width: 1300px) {
+     font-size: 40px;
+     margin-bottom: 30px;
+  }
+  @media (max-width: 1000px) {
+     font-size: 30px;
+  }
+  @media (max-width: 500px) {
+     font-size: 20px;
+     margin-bottom: 10px;
+  }
+  
+}

@@ -1,0 +1,15 @@
+{
+  "name": "sass-restaurant",
+  "version": "1.0.0",
+  "description": "Sass themed blockout for restaurant site",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -o css scss -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Chu",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

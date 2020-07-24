@@ -1,0 +1,89 @@
+.navbar {
+  position: relative;
+  z-index: 200;
+  &-navigation {
+    display: flex;
+    &-left {
+      width: 50vw;
+      height: 100vh;
+      background-color: rgba($lightblue,1);
+      position: fixed;
+      left: -60vw;
+      transition: left .8s cubic-bezier(1,0,0,1);
+      @media (max-width:800px){
+        display: none;
+      }
+      .left-image {
+        width: 50%;
+        height: 250px;
+        position: absolute;
+        box-shadow: 0px 10px 20px rgba($darkblue, 1);
+        opacity: .8;
+        border-radius: 10px;
+        @media (max-width:1300px){
+          width: 55%;
+        }
+        @media (max-width:1000px){
+          width: 65%;
+        }
+      }
+      .left-image-1{
+        top:15%;
+        left: 15%;
+        @media (max-width:1000px){
+          left: 5%;
+        }
+      }
+      .left-image-2{
+        top:35%;
+        left: 25%;
+        @media (max-width:1000px){
+          left: 15%;
+        }
+      }
+      .left-image-3{
+        top:55%;
+        left: 35%;
+        @media (max-width:1000px){
+          left: 25%;
+        }
+      }
+    }
+    &-right {
+      width: 50vw;
+      height: 100vh;
+      background-color: rgba($darkblue,1);
+      position: fixed;
+      right: -60vw;
+      @include flex-layout;
+      transition: right .8s cubic-bezier(1,0,0,1);
+      @media (max-width:800px){
+        width: 100vw;
+        right: -100vw;
+      }
+    }
+    .nav-list{
+      &-item{
+        list-style: none;
+      }
+      &-link{
+        font-family: $font-Nunito;
+        font-size: 30px;
+        @include text-style(capitalize);
+        color: $lightblue;
+        text-decoration: none;
+        display: block;
+        margin: 20px;
+        text-align: center;
+        transition: all .5s;
+        &:hover {
+          color: $offWhite;
+          letter-spacing: 4px;
+        }
+        @media (max-width:600px){
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
